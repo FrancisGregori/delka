@@ -1,0 +1,340 @@
+#homepage {
+  padding: 50px 0 0;
+
+  #vehicles {
+    .vehicles {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 5px;
+      justify-content: space-between;
+
+      .vehicle {
+        width: 100%;
+        max-width: calc(50% - 20px);
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+
+
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+        }
+
+        .image {
+          margin-bottom: 32px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        strong {
+          color: #f15922;
+          font-size: 24px;
+          line-height: 14px;
+          width: 100%;
+          display: inline-block;
+          margin-bottom: 16px;
+          font-weight: 600;
+        }
+
+        p {
+          color: #545454;
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .dropdown {
+          button {
+            width: 100%;
+            max-width: 360px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+
+            &:after {
+              margin-left: 8px;
+            }
+          }
+
+          .dropdown-menu {
+            width: 100%;
+            max-width: 360px;
+            @include border-radius(0 10px 0 10px);
+            padding: 32px 32px 0;
+
+            strong {
+              color: #fff;
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 14px;
+              width: 100%;
+              display: inline-block;
+              border-bottom: 1px solid #fff;
+              padding-bottom: 16px;
+              margin-bottom: 32px;
+            }
+
+            ul {
+              width: 100%;
+
+              li {
+                display: flex;
+                align-items: center;
+                margin: 0 0 32px;
+
+                .title {
+                  max-width: 50%;
+
+                  h4 {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 600;
+                  }
+                }
+
+                .info {
+                  margin-left: auto;
+                  padding-left: 15px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+
+                  .image {
+                    margin-bottom: 16px;
+                  }
+
+                  a {
+                    min-width: 120px;
+                    @include border-radius(12px 0 12px 0)
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* BOARDING WITH DELKA */
+  #boarding-with-delka {
+    padding: 30px 0 100px;
+
+    h2.title {
+      margin-bottom: 32px;
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+      }
+    }
+
+    .first-row {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        text-align: center
+      }
+
+      > div {
+        width: 100%;
+        max-width: 50%;
+
+
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+        }
+
+        &.left {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background: $theme-first-color;
+          padding: 30px 15px;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 200%;
+            height: 100%;
+            display: block;
+            background: $theme-first-color;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+          }
+
+          .content {
+            position: relative;
+            z-index: 2;
+            padding-right: 64px;
+
+            @include media-breakpoint-down(sm) {
+              padding: 0;
+            }
+            p {
+              color: #fff;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            a {
+              margin-top: 32px;
+              border: 1px solid;
+            }
+          }
+        }
+
+        &.right {
+          background: #eee;
+          @include border-radius(0 0 10px 0);
+          @include media-breakpoint-down(sm) {
+            @include border-radius(0);
+          }
+
+          .image {
+            width: 100%;
+
+            @include media-breakpoint-down(md) {
+              height: 50%;
+            }
+
+            img {
+              width: 100%;
+              @include media-breakpoint-down(md) {
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .box {
+            padding: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include media-breakpoint-down(md) {
+              height: 50%;
+            }
+
+            .text {
+              color: #f15922;
+              font-size: 28px;
+              font-weight: 600;
+              text-transform: uppercase;
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .second-row {
+      display: flex;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        text-align: center
+      }
+
+      > div {
+        width: 100%;
+        max-width: 50%;
+
+        @include media-breakpoint-down(sm) {
+          max-width: 100%;
+        }
+
+        &.left {
+          .image {
+            width: 100%;
+
+            img {
+              width: 100%;
+              padding-left: 15px;
+              @include media-breakpoint-down(sm) {
+                padding: 0;
+              }
+
+            }
+          }
+        }
+
+        &.right {
+          text-align: center;
+
+          .tour-360 {
+            position: relative;
+            background: $theme-first-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -32px;
+            text-align: left;
+
+            &:before {
+              content: '';
+              width: 200%;
+              height: 100%;
+              display: block;
+              background: $theme-first-color;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+            }
+
+            .info,
+            .icon {
+              position: relative;
+              z-index: 2;
+            }
+
+            .icon {
+              margin: 32px 0 0 32px;
+              @include media-breakpoint-down(md) {
+                display: none;
+              }
+            }
+
+            .info {
+              color: #fff;
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 28.02px;
+              text-transform: uppercase;
+              padding: 64px 32px 32px 64px;
+              @include media-breakpoint-down(md) {
+                text-align: center;
+              }
+            }
+          }
+
+          .symbol {
+            margin-top: 64px;
+            @include media-breakpoint-down(md) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* END BOARDING WITH DELKA */
+
+
+}
