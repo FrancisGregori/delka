@@ -1,0 +1,20 @@
+$baseDir: '../';
+
+$theme-default-font-family: 'Roboto', sans-serif;
+$theme-secondary-font-family: 'Montserrat', sans-serif;
+$theme-text-font-family: 'PT Sans', sans-serif;
+$theme-icon-font-family: '';
+
+$theme-first-color: #333;
+$theme-second-color: #666;
+$theme-third-color: #ccc;
+
+$theme-default-link-color: $theme-second-color;
+
+$theme-default-button-color: $theme-default-link-color;
+$theme-default-button-background: $theme-first-color;
+
+$theme-default-button-color-hover: $theme-default-button-color;
+$theme-default-button-background-hover: lighten($theme-default-button-background, 10%);
+
+$theme-default-transition: all .2s ease-in-out;

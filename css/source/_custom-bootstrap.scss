@@ -1,0 +1,33 @@
+/*
+$theme-colors: (
+        primary: #006400
+);
+*/
+@import './bootstrap/bootstrap';
+
+@include media-breakpoint-only(sm) {
+  .container-half {
+    max-width: map-get($container-max-widths, sm) / 2;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .container-half {
+    max-width: map-get($container-max-widths, md) / 2;
+  }
+  .container-half-md-left {
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .container-half {
+    max-width: map-get($container-max-widths, lg) / 2;
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  .container-half {
+    max-width: map-get($container-max-widths, xl) / 2;
+  }
+}
