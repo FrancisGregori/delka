@@ -87,7 +87,7 @@ if ($baseUrl === '/sobre') {
 if ($baseUrl === '/single-produtos') {
     include './headers/single-produtos.php';
 }
-if ($baseUrl === '/contato') {
+if ($baseUrl === '/contato' || $baseUrl === '/blog') {
     include './headers/contato.php';
 }
 ?>
