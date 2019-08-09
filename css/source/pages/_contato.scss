@@ -1,0 +1,230 @@
+#contact-page {
+  padding: 64px 0 0;
+
+  .form {
+    background: $theme-first-color;
+    padding: 32px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    @include border-radius(0 50px 0 0);
+    margin-bottom: 64px;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 50px;
+      height: 100%;
+      background: $theme-first-color;
+      display: inline-block;
+      top: 0;
+      left: -50px;
+      position: absolute;
+    }
+
+    form {
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      z-index: 999;
+      padding: 0 15px;
+
+      .field {
+        margin-bottom: 16px;
+        width: 100%;
+
+        &.city {
+          max-width: 60%;
+          display: inline-flex;
+        }
+
+        &.state {
+          max-width: 39%;
+          display: inline-flex;
+        }
+
+        .jquery-select {
+          width: calc(100% - 16px);
+          margin-left: auto;
+
+          &__option {
+            color: #454545;
+            font-size: 16px;
+            font-weight: 600;
+            height: 44px;
+            border: none;
+            @include border-radius(10px !important);
+          }
+
+          &__dropdown {
+            max-height: 300px;
+            @include border-radius(0 !important);
+            margin-top: 5px;
+            overflow: auto;
+          }
+        }
+
+        input, textarea {
+          color: #454545;
+          font-size: 16px;
+          font-weight: 600;
+          @include border-radius(10px !important);
+          border: none;
+
+          &::-webkit-input-placeholder {
+            color: #454545;
+          }
+
+          &:-ms-input-placeholder {
+            color: #454545;
+          }
+
+          &::placeholder {
+            color: #454545;
+          }
+        }
+
+        textarea {
+          height: 160px !important;
+          padding: 15px;
+          resize: none;
+        }
+      }
+
+      .action {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        small {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .contact-us {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+
+      .contacts {
+
+        h2 {
+          color: #fff;
+        }
+
+        .btn-theme {
+          align-self: flex-start;
+          justify-self: flex-start;
+          padding: 12px 60px 13px;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            margin-right: 6px;
+            margin-bottom: 3px;
+          }
+        }
+
+        .phones {
+          margin-top: 64px;
+          display: flex;
+          position: relative;
+
+          &:after {
+            content: '';
+            width: 200%;
+            height: 2px;
+            background: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+          }
+
+          .phone {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) {
+              padding-right: 32px;
+            }
+
+            strong {
+              color: #fff;
+              font-size: 20px;
+              font-weight: 400;
+              text-transform: uppercase;
+            }
+
+            a {
+              color: #fff;
+              font-size: 24px;
+              font-weight: 400;
+            }
+
+            address {
+              color: #fff;
+              font-weight: 400;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+
+  #contact {
+    .text {
+      text-align: center;
+    }
+  }
+
+  #contact-page .form {
+    &:before {
+      display: none;
+    }
+
+    form {
+      max-width: 100%;
+      padding: 32px 64px;
+    }
+
+    .contact-us {
+      max-width: 100%;
+      margin-top: 32px;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  #contact-page .form {
+    form {
+      max-width: 100%;
+      padding: 32px;
+
+      .field {
+        &.city, &.state {
+          max-width: 100%;
+
+          .jquery-select {
+            width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -836,9 +836,9 @@ body, html {
               font-weight: 600; }
         body #latest-posts #posts .posts article h4 a, html #latest-posts #posts .posts article h4 a {
           color: #f15922;
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 600;
-          line-height: 1;
+          line-height: 1.2;
           display: inline-block; }
           body #latest-posts #posts .posts article h4 a:hover, html #latest-posts #posts .posts article h4 a:hover {
             color: #bb3a0c; }
@@ -1549,6 +1549,156 @@ body, html {
     #single-products-page #blueprints .blueprints .options .option {
       max-width: 100%;
       padding: 32px 0; } }
+
+#contact-page {
+  padding: 64px 0 0; }
+  #contact-page .form {
+    background: #f15922;
+    padding: 32px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border-radius: 0 50px 0 0;
+    margin-bottom: 64px;
+    position: relative; }
+    #contact-page .form:before {
+      content: '';
+      width: 50px;
+      height: 100%;
+      background: #f15922;
+      display: inline-block;
+      top: 0;
+      left: -50px;
+      position: absolute; }
+    #contact-page .form form {
+      width: 100%;
+      max-width: 480px;
+      position: relative;
+      z-index: 999;
+      padding: 0 15px; }
+      #contact-page .form form .field {
+        margin-bottom: 16px;
+        width: 100%; }
+        #contact-page .form form .field.city {
+          max-width: 60%;
+          display: inline-flex; }
+        #contact-page .form form .field.state {
+          max-width: 39%;
+          display: inline-flex; }
+        #contact-page .form form .field .jquery-select {
+          width: calc(100% - 16px);
+          margin-left: auto; }
+          #contact-page .form form .field .jquery-select__option {
+            color: #454545;
+            font-size: 16px;
+            font-weight: 600;
+            height: 44px;
+            border: none;
+            border-radius: 10px !important; }
+          #contact-page .form form .field .jquery-select__dropdown {
+            max-height: 300px;
+            border-radius: 0 !important;
+            margin-top: 5px;
+            overflow: auto; }
+        #contact-page .form form .field input, #contact-page .form form .field textarea {
+          color: #454545;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 10px !important;
+          border: none; }
+          #contact-page .form form .field input::-webkit-input-placeholder, #contact-page .form form .field textarea::-webkit-input-placeholder {
+            color: #454545; }
+          #contact-page .form form .field input:-ms-input-placeholder, #contact-page .form form .field textarea:-ms-input-placeholder {
+            color: #454545; }
+          #contact-page .form form .field input::placeholder, #contact-page .form form .field textarea::placeholder {
+            color: #454545; }
+        #contact-page .form form .field textarea {
+          height: 160px !important;
+          padding: 15px;
+          resize: none; }
+      #contact-page .form form .action {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; }
+        #contact-page .form form .action small {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 400; }
+    #contact-page .form .contact-us {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px; }
+      #contact-page .form .contact-us .contacts h2 {
+        color: #fff; }
+      #contact-page .form .contact-us .contacts .btn-theme {
+        align-self: flex-start;
+        justify-self: flex-start;
+        padding: 12px 60px 13px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center; }
+        #contact-page .form .contact-us .contacts .btn-theme i {
+          margin-right: 6px;
+          margin-bottom: 3px; }
+      #contact-page .form .contact-us .contacts .phones {
+        margin-top: 64px;
+        display: flex;
+        position: relative; }
+        #contact-page .form .contact-us .contacts .phones:after {
+          content: '';
+          width: 200%;
+          height: 2px;
+          background: #fff;
+          display: inline-block;
+          position: absolute;
+          top: 100%;
+          left: 0; }
+        #contact-page .form .contact-us .contacts .phones .phone {
+          display: flex;
+          flex-direction: column; }
+          #contact-page .form .contact-us .contacts .phones .phone:not(:last-child) {
+            padding-right: 32px; }
+          #contact-page .form .contact-us .contacts .phones .phone strong {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase; }
+          #contact-page .form .contact-us .contacts .phones .phone a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 400; }
+          #contact-page .form .contact-us .contacts .phones .phone address {
+            color: #fff;
+            font-weight: 400;
+            font-size: 18px; }
+
+@media (max-width: 991.98px) {
+  #contact .text {
+    text-align: center; }
+  #contact-page .form:before {
+    display: none; }
+  #contact-page .form form {
+    max-width: 100%;
+    padding: 32px 64px; }
+  #contact-page .form .contact-us {
+    max-width: 100%;
+    margin-top: 32px; } }
+
+@media (max-width: 575.98px) {
+  #contact-page .form form {
+    max-width: 100%;
+    padding: 32px; }
+    #contact-page .form form .field.city, #contact-page .form form .field.state {
+      max-width: 100%; }
+      #contact-page .form form .field.city .jquery-select, #contact-page .form form .field.state .jquery-select {
+        width: 100%;
+        margin-left: 0; } }
 
 /* GENERAL IMPORTS */
 html.lb-disable-scrolling {
