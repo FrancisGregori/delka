@@ -92,11 +92,8 @@
 <!--JQUERY CUSTOM SELECT-->
 <script src="./js/jquery.custom-select.min.js"></script>
 
-<!--MASK INPUTS-->
-<!--<script src="./js/jquery.mask.min.js"></script>-->
-
-<!--FORM VALIDATION-->
-<!--<script src="./js/jquery.validate.min.js"></script>-->
+<!--JQUERY LIGHTBOX-->
+<script src="./js/lightbox.min.js"></script>
 
 <!--THEME SCRIPTS-->
 <script src="./js/scripts.min.js"></script>

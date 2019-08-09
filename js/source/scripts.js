@@ -15,4 +15,31 @@ jQuery(function ($) {
         })
     }
 
-})
+    if ($('#gallery .owl-carousel').length > 0) {
+
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            navText: ['<i class="dlk-icon-chevron-left"></i>', '<i class="dlk-icon-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                767: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1024: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        })
+
+    }
+});

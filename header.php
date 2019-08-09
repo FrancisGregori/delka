@@ -84,6 +84,9 @@ if ($baseUrl === '/') {
 if ($baseUrl === '/sobre') {
     include './headers/sobre.php';
 }
+if ($baseUrl === '/single-produtos') {
+    include './headers/single-produtos.php';
+}
 ?>
 
 

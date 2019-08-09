@@ -33,14 +33,15 @@ body, html {
 
     #header-banner {
       margin-bottom: -70px;
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         margin-bottom: -40px;
       }
-      .banner{
-        img{
+
+      .banner {
+        img {
           min-height: 400px;
           object-fit: cover;
-          @include media-breakpoint-down(md){
+          @include media-breakpoint-down(md) {
             min-height: 300px;
           }
         }
@@ -49,7 +50,8 @@ body, html {
 
     #main-header .navbar {
       justify-content: flex-start;
-      .navbar-nav{
+
+      .navbar-nav {
         margin-left: 0 !important;
       }
     }
@@ -973,8 +975,9 @@ body, html {
 /* PAGES */
 @import "pages/homepage";
 @import "pages/sobre";
+@import "pages/single-produtos";
 
 /* GENERAL IMPORTS */
-@import 'jquery-custom-select/jquery.custom-select';
-//@import 'lightbox';
+@import 'lightbox';
 @import 'owl-carousel/owl.carousel';
+@import 'jquery-custom-select/jquery.custom-select';
